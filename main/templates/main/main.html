@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="border">
+        <form method="post" id="file_form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    
+    <div class="border">
+        <input type="submit" value="Get data" id="get_data">
+        <div id="wrapper">
+            <table id="deals" class="hide">
+                <tr>
+                  <th>Customer</th>
+                  <th>Item</th>
+                  <th>Total</th>
+                  <th>Quantity</th>
+                  <th>Date</th>
+                </tr>
+                <tr>
+              </table>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>

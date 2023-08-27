@@ -1,0 +1,4 @@
+deals.csv
+venv/
+*.py[co]
+__pycache__
